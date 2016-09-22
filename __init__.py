@@ -274,7 +274,7 @@ class Knob(Widget):
         while self._angle < angle:
             self._angle     =   self._angle + self._angle_step
 
-        relativeValue   =   pow((angle/360.), 1./self.curve)
+        relativeValue   =   pow((self._angle/360.), 1./self.curve)
         self.value      =   (relativeValue * (self.max - self.min)) + self.min
 
 
